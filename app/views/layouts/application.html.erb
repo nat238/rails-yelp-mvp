@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>RailsYelpMvp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +11,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color: #f7f7f7; border: 0 0 0 1px solid">
+    <div class="navbar-lewagon" style="background-color: #ededed">
+      <%= link_to "home", restaurants_path, class: "btn btn-primary" %>
+      <%= link_to "add restaurant", new_restaurant_path, class: "btn btn-primary"%>
+    </div>
     <%= yield %>
+
   </body>
 </html>

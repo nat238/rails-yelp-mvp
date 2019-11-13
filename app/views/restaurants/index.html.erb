@@ -1,0 +1,17 @@
+<div class="container" style="background-color: #f7f7f7">
+  <h1 style="text-align: center; color: red">Restaurants</h1>
+    <div class="row">
+      <% @restaurants.each do |restaurant| %>
+
+        <div class="col-4" style="background-color: white; border: 1px solid grey; border-radius: 5px">
+          <h2 style="color: blue"><%= link_to "#{restaurant.name}", restaurant_path(restaurant) %> <%= " |#{restaurant.average_rating}|" %></h2>
+          <ul>
+            <li><%= "Address : " + restaurant.address %></li>
+            <li><%= "Phone number : " + restaurant.phone_number %></li>
+            <li><%= "Category : " + restaurant.category %></li>
+          </ul>
+
+        </div>
+      <% end %>
+    </div>
+</div>
